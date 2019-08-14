@@ -4,13 +4,6 @@ This project is built on `node.js` using `express`,`graphQL` and `mongoDB` as de
 
 ## 🚀 Quick start
 
-
-1. **Requirements**
-
-- Git [Install Git](https://git-scm.com/downloads).
-- Nodejs [Install Nodejs](https://nodejs.org/en/download/).
-- Project at [MongoDB Cloud](https://cloud.mongodb.com).
-
 0. **Create Project on Mongo Cloud**
 - Open [MongoDB Cloud](https://cloud.mongodb.com) in your browser.
 - Click on `New Project` 
@@ -21,6 +14,12 @@ This project is built on `node.js` using `express`,`graphQL` and `mongoDB` as de
 - Create a user for database by navigating to `Database Access` tab in the left panel 
 - Add your IP address by clicking on `Network Access` tab and choose `ADD CURRENT IP ADDRESS`
 - Get URI to connect to your database from `Cluster` > `Connect`
+
+1. **Requirements**
+
+- Git [Install Git](https://git-scm.com/downloads).
+- Nodejs [Install Nodejs](https://nodejs.org/en/download/).
+- Project at [MongoDB Cloud](https://cloud.mongodb.com).
 
 2.  **Clone the repo.**
 - `git clone https://github.com/mkamranhamid/graphql-mongo-starter myproject`
