@@ -1,14 +1,14 @@
 //Import the mongoose module
-const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 /**
  * Connect to MongoDB.
  */
-exports.dbconnection = () => {
+export const dbconnection = () => {
     const mongoDB = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_SRV}/test?retryWrites=true`;
-    // mongoose.set('useFindAndModify', false);
-    // mongoose.set('useCreateIndex', true);
+    mongoose.set('useFindAndModify', false);
+    mongoose.set('useCreateIndex', true);
     mongoose.set('useNewUrlParser', true);
     mongoose.connect(mongoDB)
         .then(() => {

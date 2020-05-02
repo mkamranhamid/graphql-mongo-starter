@@ -1,0 +1,1 @@
+{"version":3,"file":"PersonType.js","sourceRoot":"","sources":["../../../app/types/PersonType.ts"],"names":[],"mappings":";;AAAA,qCAIiB;AAEJ,QAAA,UAAU,GAAG,IAAI,2BAAiB,CAAC;IAC5C,IAAI,EAAE,QAAQ;IACd,MAAM,EAAE;QACJ,EAAE,EAAE,EAAE,IAAI,EAAE,mBAAS,EAAE;QACvB,SAAS,EAAE,EAAE,IAAI,EAAE,uBAAa,EAAE;QAClC,QAAQ,EAAE,EAAE,IAAI,EAAE,uBAAa,EAAE;KACpC;CACJ,CAAC,CAAC"}

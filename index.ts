@@ -1,11 +1,10 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const ExpressGraphQL = require("express-graphql");
-const mongoose = require("mongoose");
+import express from 'express';
+import bodyParser from 'body-parser';
+import ExpressGraphQL from "express-graphql";
 require('dotenv').config();
 
-const { dbconnection } = require("./app/connection");
-const schema = require("./app/schema");
+import { dbconnection } from "./app/connection";
+import schema from "./app/schema";
 
 const app = express();
 const port = process.env.PORT || 3000;

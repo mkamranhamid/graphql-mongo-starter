@@ -1,14 +1,16 @@
-const PersonModel = require('../models/Person');
+import { PersonModel } from '../models/Person';
 
-exports.Query = {
+const Query = {
     byId: (root, args, context, info) => {
         return PersonModel.findById(args.id).exec();
     }
 }
 
-exports.Mutation = {
+const Mutation = {
     create: (root, args, context, infor) => {
         const person = new PersonModel(args);
         return person.save();
     }
 }
+
+export default { Query, Mutation }

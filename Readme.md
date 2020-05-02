@@ -1,6 +1,7 @@
 # GraphQl & MongoDB Starter for Hackathon
 
 This project is built on `node.js` using `express`,`graphQL` and `mongoDB` as dependencies. 
+If you're not a fan of `typescript`. We have a `javascript` starter too 😃. Switch the branch to `javascrpt` and voila.
 
 ## 🚀 Quick start
 
@@ -29,3 +30,27 @@ This project is built on `node.js` using `express`,`graphQL` and `mongoDB` as de
 3. **Start Project**
 - `npm start`
 - Open `localhost:3000/graphql` in your browser
+
+4. **Playing in Graphiql**
+- query
+    ```
+    query {
+        people {
+            id
+            firstname
+            lastname
+        }
+    }
+    ```
+
+- mutate(add/update/delete)
+    ```
+    mutation {
+      login(input: {
+        email: "mkamranhamid@gmail.com",
+        password: "123456",
+      }) {
+        id
+      }
+    }
+    ```

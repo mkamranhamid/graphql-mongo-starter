@@ -1,14 +1,9 @@
-const {
-    GraphQLID,
-    GraphQLString,
-    GraphQLList,
-    GraphQLNonNull,
+import {
     GraphQLObjectType,
     GraphQLSchema
-} = require("graphql");
-const PersonType = require('../types/PersonType');
-const RootQuery = require('./RootQuery');
-const RootMutation = require('./RootMutation');
+} from "graphql";
+import RootQuery from './RootQuery';
+import RootMutation from './RootMutation';
 
 const schema = new GraphQLSchema({
     query: new GraphQLObjectType({
@@ -21,4 +16,4 @@ const schema = new GraphQLSchema({
     })
 });
 
-module.exports = schema;
+export default schema;

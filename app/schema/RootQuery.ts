@@ -1,12 +1,12 @@
-const {
+import {
     GraphQLID,
     GraphQLList,
     GraphQLNonNull
-} = require("graphql");
+} from "graphql";
 
-const PersonType = require('../types/PersonType');
-const PeopleResolver = require('../resolvers/people');
-const PersonResolver = require('../resolvers/person');
+import { PersonType } from '../types/PersonType';
+import PeopleResolver from '../resolvers/people';
+import PersonResolver from '../resolvers/person';
 
 const query = {
     people: {
@@ -21,4 +21,4 @@ const query = {
         resolve: PersonResolver.Query.byId
     }
 }
-module.exports = query;
+export default query;
