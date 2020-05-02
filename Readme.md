@@ -46,10 +46,10 @@ If you're not a fan of `typescript`. We have a `javascript` starter too 😃. Sw
 - mutate(add/update/delete)
     ```
     mutation {
-      login(input: {
+      login(
         email: "mkamranhamid@gmail.com",
         password: "123456",
-      }) {
+      ) {
         id
       }
     }
