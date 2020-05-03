@@ -2,7 +2,8 @@
     "watch": [
         "app",
         "./index.ts",
-        ".eslintrc.json"
+        ".eslintrc.json",
+        ".env"
     ],
     "ext": "ts",
     "ignore": [

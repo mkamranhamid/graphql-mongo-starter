@@ -11,15 +11,22 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// mongoose connection
-dbconnection();
-console.log("hello"); // eslint-disable-line
-// GraphQL
-app.use('/graphql', ExpressGraphQL({
-    schema: schema,
-    graphiql: true
-}));
 
-app.listen(port, () => {
-    console.log('APP is listening on port:', port); // eslint-disable-line
-});
+async function connectDB() {
+    // mongoose connection
+    try {
+        await dbconnection();
+        // GraphQL
+        app.use('/graphql', require('express-graphql')({ // eslint-disable-line
+            schema: require('./app/schema'),
+            graphiql: true
+        }));
+
+        app.listen(port, () => {
+            console.log('APP is listening on port:', port); // eslint-disable-line
+        });
+    } catch (err) {
+        console.log('ROOT ERR: ', err.message); // eslint-disable-line
+    }
+}
+connectDB();

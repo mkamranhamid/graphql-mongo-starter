@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon",
-    "build": "tsc",
+    "build": "npm run lint && tsc",
     "lint": "eslint . --ext ts",
-    "lint:fix": "eslint . --fix --ext ts"
+    "lint:fix": "eslint --fix --fix-type suggestion --fix-type problem . --ext ts"
   },
   "keywords": [
     "graphql",
