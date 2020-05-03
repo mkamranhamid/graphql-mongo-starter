@@ -15,8 +15,6 @@ export const dbconnection = async () => {
         console.error('MongoDB connected :)'); // eslint-disable-line
         return true;
     } catch (err) {
-        console.error(err); // eslint-disable-line
-        console.log('MongoDB connection error. Please make sure MongoDB is running.'); // eslint-disable-line
         // process.exit();
         throw new Error(err);
     }

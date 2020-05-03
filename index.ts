@@ -27,6 +27,8 @@ async function connectDB() {
         });
     } catch (err) {
         console.log('ROOT ERR: ', err.message); // eslint-disable-line
+        console.log('MongoDB connection error. Please make sure MongoDB is running.'); // eslint-disable-line
+        process.exit();
     }
 }
 connectDB();
