@@ -1,6 +1,5 @@
 //Import the mongoose module
-// const mongoose = require('mongoose');
-import mongoose from "mongoose";
+import * as mongoose from "mongoose";
 
 /**
  * Connect to MongoDB.
@@ -12,11 +11,11 @@ export const dbconnection = () => {
     mongoose.set('useNewUrlParser', true);
     mongoose.connect(mongoDB)
         .then(() => {
-            console.log('connection succesful');
+            console.log('connection succesful'); // eslint-disable-line
         })
         .catch((err) => {
-            console.error(err);
-            console.log('MongoDB connection error. Please make sure MongoDB is running.');
+            console.error(err); // eslint-disable-line
+            console.log('MongoDB connection error. Please make sure MongoDB is running.'); // eslint-disable-line
             process.exit();
         });
 }

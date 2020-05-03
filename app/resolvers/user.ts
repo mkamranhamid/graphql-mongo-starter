@@ -19,7 +19,6 @@ export const Mutation = {
         const user = UserModel.findOne({ email: args.email });
         const userExec = await user.exec();
         // const { validPassword } = userExec.schema.methods;
-        console.log(userExec);
         if (!userExec) {
             return;
         }

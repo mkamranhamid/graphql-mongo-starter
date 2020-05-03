@@ -2,7 +2,6 @@ import {
     GraphQLID,
     GraphQLString,
     GraphQLObjectType,
-    GraphQLSchema
 } from "graphql";
 
 export const UserType = new GraphQLObjectType({

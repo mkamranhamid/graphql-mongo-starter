@@ -1,10 +1,14 @@
 {
     "watch": [
-        "app"
+        "app",
+        "./index.ts",
+        ".eslintrc.json"
     ],
     "ext": "ts",
     "ignore": [
-        "app/**/*.spec.ts"
+        "app/**/*.spec.ts",
+        "node_modules",
+        "dist"
     ],
-    "exec": "ts-node ./index.ts"
+    "exec": "npm run lint && ts-node ./index.ts"
 }

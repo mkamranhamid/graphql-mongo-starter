@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-export const PersonModel = mongoose.model("person", {
+const PersonSchema = new Schema({
     firstname: { type: String, required: true },
     lastname: { type: String, required: true }
-});
+}, { timestamps: true });
+export const PersonModel = model("person", PersonSchema);

@@ -1,6 +1,6 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import ExpressGraphQL from "express-graphql";
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import * as ExpressGraphQL from "express-graphql";
 require('dotenv').config();
 
 import { dbconnection } from "./app/connection";
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // mongoose connection
 dbconnection();
-
+console.log("hello"); // eslint-disable-line
 // GraphQL
 app.use('/graphql', ExpressGraphQL({
     schema: schema,
@@ -21,5 +21,5 @@ app.use('/graphql', ExpressGraphQL({
 }));
 
 app.listen(port, () => {
-    console.log('APP is listening on port:', port);
+    console.log('APP is listening on port:', port); // eslint-disable-line
 });
